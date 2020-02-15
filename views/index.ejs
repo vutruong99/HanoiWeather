@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hanoi Temperature</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    </head>
+
+    <body>        
+        <h1>Hanoi weather forecast</h1>
+
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="table100">
+                        <table>
+                            <thead >
+                                <tr class="table100-head">
+                                    <th class="column1">Date</th>
+                                    <th class="column2">Description</th>
+                                    <th class="column3">Temperature</th>
+                                    <th class="column4">Humidity</th>
+                                </tr>
+                            </thead>
+                            <% for(var i=0; i < 39; i++) { %>
+                                <tbody>
+                                    <tr>
+                                      <td class = "column1"><%= weatherData.list[i].dt_txt %></td>
+                                      <td class = "column2"><%= weatherData.list[i].weather[0].description %></td>
+                                      <td class = "column3"><%= weatherData.list[i].main.temp %> &#8451</td>
+                                      <td class = "column4"><%= weatherData.list[i].main.humidity %> %</td>
+                                    </tr>
+                                </tbody>
+                            <% } %>
+                        </table>
+                        <h2 style="text-align: center;"> <a href="about">About</a></h2>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+     
+        <script src="js/main.js"></script>
+    </body>
+</html>

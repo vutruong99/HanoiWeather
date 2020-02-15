@@ -1,0 +1,100 @@
+body {
+  background: #d53369;
+  background: -webkit-linear-gradient(45deg, #d53369, #cbad6d);
+  background: -o-linear-gradient(45deg, #d53369, #cbad6d);
+  background: -moz-linear-gradient(45deg, #d53369, #cbad6d);
+  background: linear-gradient(45deg, #d53369, #cbad6d);
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  background-image: url("./hn2.jpg");
+  background-size: cover;
+  padding: 8%;
+  margin-top: 0px;
+  text-shadow: 2px 2px 8px black;
+}
+
+a {color: black}         /* Unvisited link  */
+a:visited {color:black} /* Visited link    */
+a:hover {color: none;}   /* Mouse over link */
+a:active {colornone;}  /* Selected link   */
+
+a {
+  text-decoration: none;
+}
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  padding-top: 2%;
+}
+td, th {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  padding: 5px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 50%;
+  background-color: white;
+  border-radius: 20px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  h1 {
+    color: chocolate;
+    font-size: 60px;
+  }
+  
+  .about-container {
+    width: 500px;
+  }
+
+  li {
+    font-size: 20px;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  h1 {
+    color :orange;
+    font-size: 30px;
+    min-width: 300px;
+  }
+
+  .about-container {
+    width: 300px;
+  }
+
+  li {
+    font-size: 17px;
+  }
+
+}
+
